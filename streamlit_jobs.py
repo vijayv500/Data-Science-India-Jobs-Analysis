@@ -16,8 +16,9 @@ st.markdown("""-----------------------------------------------------------------
 st.markdown("""
 * For the best user-experience, open this app link on your laptop/ipad/desktop.	
 * Select the location & job title from the dropdown menus on top left.
+* Total jobs analysed: 2424.
 * Data was scraped from web. All the jobs have been posted during the past 30 days. 
-* Entry-level Jobs (usually 0-3 years experience sought).
+* Entry-level jobs (usually 0-3 years experience sought).
 * [Github Repo](https://github.com/vijayv500/Data-Science-India-Jobs-Analysis), [Twitter](https://twitter.com/vijayv500), [Medium Blog](https://vijayv500.medium.com), [Instagram](https://www.instagram.com/vijayv500/)
 * Please scroll down till the end.
 ------------------------------------------------------------------------------------------------
@@ -359,7 +360,7 @@ st.pyplot()
 st.markdown("""------------------------------------------------------------------------------------------------""")
 
 # **************************************************************************************************
-st.subheader('Companies Hiring For All Data Science Realted Roles')
+st.subheader('Companies Hiring For All Data Science Related Roles')
 company_list = df['company'].values.tolist()
 count = Counter(company_list)
 wordcloud = WordCloud(width = 1600, height = 800, background_color='lightblue')\
