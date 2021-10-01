@@ -16,10 +16,8 @@ st.markdown("""-----------------------------------------------------------------
 st.markdown("""
 * For the best user-experience, open this app link on your laptop/ipad/desktop.	
 * Select the location & job title from the dropdown menus on top left.
-* Total jobs analysed: 2424.
+* Total jobs analysed: 2424. Entry-level jobs (usually 0-3 years experience sought).
 * Data was scraped from web. All the jobs have been posted during the past 30 days. 
-* Entry-level jobs (usually 0-3 years experience sought).
-* [Github Repo](https://github.com/vijayv500/Data-Science-India-Jobs-Analysis), [Twitter](https://twitter.com/vijayv500), [Medium Blog](https://vijayv500.medium.com), [Instagram](https://www.instagram.com/vijayv500/)
 * Please scroll down till the end.
 ------------------------------------------------------------------------------------------------
 """)
@@ -47,11 +45,11 @@ companies_df = pd.DataFrame(list(zip(list1,list2)), columns=['company','count'])
 fig = px.bar(companies_df[0:10],y='company', x='count', text='count',orientation='h',
             labels={'count':'Count'}, color='count', color_continuous_scale = 'Viridis') 
 fig.update_traces(textposition='outside')
-fig.update_layout(title_text="<b>Top Companies</b>",
+fig.update_layout(title_text="<b>Top Companies Hiring</b>",
                  title_font_size=25,
                  title_font_color='green',
                  title_font_family='Titillium Web',
-                 title_x=0.65,
+                 title_x=0.57,
                  title_y=0.95,
                  title_xanchor='center',
                  title_yanchor='top',
@@ -371,8 +369,34 @@ plt.axis("off")
 plt.show() 
 st.pyplot()
 
+st.sidebar.markdown("""------------------------------------------------------------------------------------------------""")
 
 
+st.sidebar.markdown("""
+
+
+
+
+
+
+
+
+        """)
+
+st.sidebar.markdown("""
+
+
+
+
+
+        * [Github Repo](https://github.com/vijayv500/Data-Science-India-Jobs-Analysis)
+
+        * [Twitter](https://twitter.com/vijayv500)
+
+        * [Medium Blog](https://vijayv500.medium.com) 
+
+        * [Instagram](https://www.instagram.com/vijayv500/)
+""")
 
 
 
